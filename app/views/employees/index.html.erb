@@ -1,3 +1,12 @@
+
+<template id="employee-row">
+  <tr>
+    <td>{{ employee.name }}</td>
+    <td>{{ employee.email }}</td>
+    <td>{{ employee.manager }}</td>
+  </tr>
+</template>
+
 <h1>Employees</h1>
 
 <div id="employees">
@@ -10,11 +19,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="employee in employees">
-        <td>{{ employee.name }}</td>
-        <td>{{ employee.email }}</td>
-        <td>{{ employee.manager }}</td>
-      </tr>
+    	<tr is="employee-row" v-for="employee in employees"
+    		:employee="employee">
+    	</tr>
     </tbody>
   </table>
 </div>
