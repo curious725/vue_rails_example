@@ -8,7 +8,13 @@ Vue.component('employee-row', {
 var employees = new Vue({
   el: '#employees',
   data: {
-    employees: []
+    employees: [],
+    employee: {
+      name: '',
+      email: '',
+      manager: false
+    },
+    errors: {}
   },
   ready: function() {
     var that;
